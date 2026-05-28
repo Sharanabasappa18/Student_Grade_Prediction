@@ -97,14 +97,11 @@ pip install -r requirements.txt
 Run the project using:
 
 ```bash
-python student_analysis.py
-```
-       or 
+python student_analysis.py        
+     or 
 ```bash
 streamlit run app.py
-
-
-
+```
 ---
 
 ## Machine Learning Model
