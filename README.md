@@ -99,7 +99,6 @@ Run the project using:
 ```bash
 python student_analysis.py        
      or 
-```bash
 streamlit run app.py
 ```
 ---
