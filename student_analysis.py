@@ -14,6 +14,7 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.preprocessing import LabelEncoder
 
 import warnings
 
@@ -56,6 +57,48 @@ def main():
 
     print("\nStatistical Summary:\n")
     print(df.describe())
+    
+    # ==================================================
+    # 1. CHECK MISSING VALUES
+    # ==================================================
+
+    print("\nMissing Values Before Cleaning:")
+    print(df.isnull().sum())
+
+    # Fill Missing Numerical Values with Mean
+    df.fillna(df.mean(numeric_only=True), inplace=True)
+
+    # Fill Missing Categorical Values with Mode
+    for col in df.select_dtypes(include='object').columns:
+        df[col].fillna(df[col].mode()[0], inplace=True)
+
+    print("\nMissing Values After Cleaning:")
+    print(df.isnull().sum())
+
+    # ==================================================
+    # 2. REMOVE DUPLICATES
+    # ==================================================
+
+    print("\nDuplicate Rows Before Removal:", df.duplicated().sum())
+
+    df.drop_duplicates(inplace=True)
+
+    print("Duplicate Rows After Removal:", df.duplicated().sum())
+
+    # ==================================================
+    # ENCODING CATEGORICAL DATA
+    # ==================================================
+
+    # Label Encoding
+    le = LabelEncoder()
+
+    for col in df.select_dtypes(include='object').columns:
+        df[col] = le.fit_transform(df[col])
+
+    print("\nDataset After Encoding:")
+    print(df.head())
+
+
 
     # =====================================================
     # 3. VISUALIZATIONS
