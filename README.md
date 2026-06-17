@@ -166,7 +166,7 @@ based on user-entered reading and writing scores.
 
 ## Author
 
-Sharanabasappa & Nikhil B K
+Sharanabasappa
 BTech - AI & ML
 Rai Technology University
 
