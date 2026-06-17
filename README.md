@@ -167,7 +167,7 @@ based on user-entered reading and writing scores.
 ## Author
 
 Sharanabasappa
-BTech - AI & ML
+BTech(CSE) - AI & ML
 Rai Technology University
 
 ---
