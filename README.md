@@ -164,14 +164,6 @@ based on user-entered reading and writing scores.
 
 ---
 
-## Author
-
-Sharanabasappa
-BTech(CSE) - AI & ML
-Rai Technology University
-
----
-
 ## License
 
 This project is developed for educational and academic purposes.
