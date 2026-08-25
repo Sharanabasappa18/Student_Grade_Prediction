@@ -1,7 +1,6 @@
 # =========================================================
 # STUDENT MARKS ANALYSIS & GRADE PREDICTOR
 # =========================================================
-
 # =========================
 # IMPORT LIBRARIES
 # =========================
@@ -23,7 +22,6 @@ warnings.filterwarnings('ignore')
 
 # Set graph style
 sns.set_theme(style="whitegrid")
-
 
 # =========================================================
 # MAIN FUNCTION
@@ -97,8 +95,6 @@ def main():
 
     print("\nDataset After Encoding:")
     print(df.head())
-
-
 
     # =====================================================
     # 3. VISUALIZATIONS
@@ -351,7 +347,6 @@ def main():
         print("\n-----------------------------------\n")
 
     print("\n========== COMPLETED ==========\n")
-
 
 # =========================================================
 # RUN PROGRAM
